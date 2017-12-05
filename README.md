@@ -6,6 +6,7 @@ The video is gonna lag too much.
 
 Few bugs and Issues are there. 
 - If the face is not detected, the classifier will take a random cropped frame and try to classify it which is not good.
+- A new trained weight is not used. So, Classification might be wrong sometimes.
 
-Better version - date(5/12/2017)
+Better version - date(05/12/2017)
 It will get uploaded after some days.
