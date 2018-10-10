@@ -1,13 +1,13 @@
-# Keras-Opencv-Gender-Classification
+# Keras-Gender-Classification
 
 A Neural Network based Face Detection system with classification of Males and Females.
 
 It uses a 100 pixels frame and classifies it as a Male or Female.
 
-#Classifier_v1.4
+Classifier_v1.4
 - This code uses the Screen Capture method to take the frame from the window and perform Classification.
 
-#Video_detection1.2
+Video_detection1.2
 - This code uses the webcam or any camera attached to your pc and performs Classification.
 
 The image data for Male and Female is stored in the file "MF_dataset.npy" and use numpy to extract the image data.
