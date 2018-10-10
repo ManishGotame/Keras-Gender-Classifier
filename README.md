@@ -1,4 +1,4 @@
-# Keras-Opencv-Video-Classification
+# Keras-Opencv-Gender-Classification
 
 A Neural Network based Face Detection system with classification of Males and Females.
 
