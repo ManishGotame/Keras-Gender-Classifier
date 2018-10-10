@@ -21,6 +21,9 @@ img_height = 70
 img_width = img_height
 # img_width = 50
 
+vid_height = 1280
+vid_width = 720 
+
 loaded_model.compile(
 		loss='binary_crossentropy', # classify between 2 images, Maybe 0 and 1 
 		#loss='categorical_crossentropy'#categorical_crossentropy classifies between more than 2 images 
@@ -29,6 +32,32 @@ loaded_model.compile(
 	)
 # Pool = mp.Pool()
 # pool = ThreadPool(2)
+
+def GRAB_screen(height, width): #screen cap
+		left = win32api.GetSystemMetrics(win32con.SM_XVIRTUALSCREEN)
+		top = win32api.GetSystemMetrics(win32con.SM_YVIRTUALSCREEN) 
+
+		hwin = win32gui.GetDesktopWindow()
+		hwindc = win32gui.GetWindowDC(hwin)
+		srcdc = win32ui.CreateDCFromHandle(hwindc)
+		memdc = srcdc.CreateCompatibleDC()
+		bmp = win32ui.CreateBitmap()
+		bmp.CreateCompatibleBitmap(srcdc, width, height)
+		memdc.SelectObject(bmp)
+		memdc.BitBlt((0, 0), (width, height), srcdc, (left, top), win32con.SRCCOPY)
+		# memdc.BitBlt((0, 0), (width, height), srcdc, (width, height), win32con.SRCCOPY)
+		
+		signedIntsArray = bmp.GetBitmapBits(True)
+		img = np.fromstring(signedIntsArray, dtype='uint8')
+		img.shape = (height, width,4)
+
+		srcdc.DeleteDC()
+		memdc.DeleteDC()
+		win32gui.ReleaseDC(hwin, hwindc)
+		win32gui.DeleteObject(bmp.GetHandle())
+
+		img = cv2.cvtColor(img, cv2.COLOR_BGRA2RGB)
+		return cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 cap = cv2.VideoCapture('female_ijustine.mp4')
 
@@ -95,7 +124,8 @@ def Main():
 
 
 
-		ret, frame = cap.read()
+		#ret, frame = cap.read()
+		frame = GRAB_screen(vid_height, vid_width)
 		# if ret == True:
 		# try:
 		# frame = cv2.flip(frame, 10)
