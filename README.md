@@ -14,5 +14,5 @@ The image data for Male and Female is stored in the file "MF_dataset.npy" and us
 
 At the moment, The dataset used to train the model is small and the neural network model, itself is a small one so wouldn't be as powerful as you might expect it to be but feel free to change and use the model for your own purposes.
 
-This project is an extension of "Image Gender classifier" and its training model is in there
+This project is an extension of "Image Gender classifier" and the neural network model is there.
 - https://github.com/ManishGotame/Image-Gender-Classifier
