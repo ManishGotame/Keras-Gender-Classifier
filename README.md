@@ -1,4 +1,4 @@
-# Keras-Gender-Classification
+# Keras-Video-Gender-Classification
 
 A Neural Network based Face Detection system with classification of Males and Females.
 
