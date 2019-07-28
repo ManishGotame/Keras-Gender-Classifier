@@ -5,7 +5,7 @@ import imutils
 import time
 import Queue 
 
-import thread
+#import thread
 # from multiprocessing.pool import ThreadPool
 import keras 
 from keras.models import load_model
