@@ -61,7 +61,7 @@ def Main():
 				q.put(frame)
 				# time.sleep(timer)
 			except Exception as e:
-				print e
+				print(e)
 				# pass
 				cropped_face = frame[20:20+40,4:4+2]
 				z.put(cropped_face)
@@ -94,7 +94,7 @@ def Main():
 					break
 
 			except Exception as e:
-				print e 
+				print(e) 
 Main()
 
 cap.release()
