@@ -13,7 +13,8 @@ from keras.models import load_model
 # loaded_model = load_model('male_and_female_100pixels_improved_50epochs.h5')
 # loaded_model = load_model('Male-And-Female-70pixels-1100+500_epochs.h5.h5')
 # loaded_model = load_model('Male-And-Female-70pixels-1100+500+500_epochs.h5')
-loaded_model = load_model('Male-And-Female-70pixels-1100+500+500+50+50_epochs.h5')
+# loaded_model = load_model('Male-And-Female-70pixels-1100+500+500+50+50_epochs.h5')
+loaded_model = load_model("Weights.h5")
 Face_cascade = cv2.CascadeClassifier('Face_Detection/haarcascade_frontalface_default.xml')
 # ends here
 
