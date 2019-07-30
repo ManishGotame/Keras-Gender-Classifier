@@ -12,19 +12,8 @@ import keras
 from keras.models import load_model
 import os 
 
-# ================== classifier weights ====================
-# loaded_model = load_model('pretrained_weights/casy_test.h5')
-# loaded_model = load_model('pretrained_weights/Male-And-Female-50pixels.h5')
-# loaded_model = load_model('pretrained_weights/casy_test_900.h5')
-# loaded_model = load_model('pretrained_weights/male_and_female_100pixels_improved_50epochs.h5')
-# loaded_model = load_model('pretrained_weights/Male-And-Female-70pixels-1100+500_epochs.h5.h5')
-# loaded_model = load_model('pretrained_weights/Male-And-Female-70pixels-1100+500+500_epochs.h5')
-loaded_model = load_model('Weights/Male-And-Female-70pixels-1100+500+500+50+50_epochs.h5')
-# loaded_model = load_model('pretrained_weights/Sample_weights_810_samples.h5')
-
+loaded_model = load_model('MF_weight_70Pixels.h5')
 Face_cascade = cv2.CascadeClassifier('Face_Detection/haarcascade_frontalface_default.xml')
-# ends here
-
 img_height = 70
 img_width = img_height
 # img_width = 50
