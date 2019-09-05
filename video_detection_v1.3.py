@@ -42,7 +42,7 @@ cap = cv2.VideoCapture(vidName)
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
 
-out = cv2.VideoWriter('videopy.mp4',cv2.VideoWriter_fourcc('M','J','P','G'), 20, (frame_width,frame_height))
+out = cv2.VideoWriter('output.avi', -1, 20.0, (frame_width, frame_height))
 
 # ends here
 
