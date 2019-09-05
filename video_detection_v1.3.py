@@ -34,13 +34,22 @@ cv2.createTrackbar('gray', "WINDOW", 450 , 1300, nothing)
 
 cap = cv2.VideoCapture(0)
 
-q = Queue()
-z = Queue()
-y = Queue()
-f = Queue()
-xw = Queue()
-yw = Queue()
-
+try:
+	q = Queue()
+	z = Queue()
+	y = Queue()
+	f = Queue()
+	xw = Queue()
+	yw = Queue()
+except:
+	q = Queue.Queue()
+	z = Queue.Queue()
+	y = Queue.Queue()
+	f = Queue.Queue()
+	xw = Queue.Queue()
+	yw = Queue.Queue()
+	
+	
 def Main():
 	while(True):
 		def Classifier(face_img):
