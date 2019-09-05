@@ -1,6 +1,6 @@
 # fixed unecessary crashing of the classifier
 # added an controller to resize the video output size
-vidName = "gbsvideo.mp4"
+#vidName = "gbsvideo.mp4"
 
 
 import numpy as np
@@ -34,15 +34,15 @@ cv2.createTrackbar('gray', "WINDOW", 450 , 1300, nothing)
 
 # cap = cv2.VideoCapture('Test_video/splice') # if you want to run this program on a video file
 
-#cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0)
 # new changes for the demo 
 
-cap = cv2.VideoCapture(vidName)
+#cap = cv2.VideoCapture(vidName)
 
-frame_width = int(cap.get(3))
-frame_height = int(cap.get(4))
+#frame_width = int(cap.get(3))
+#frame_height = int(cap.get(4))
 
-out = cv2.VideoWriter('output.avi', -1, 20.0, (frame_width, frame_height))
+#out = cv2.VideoWriter('output.avi', -1, 20.0, (frame_width, frame_height))
 
 # ends here
 
@@ -127,9 +127,9 @@ def Main():
 			video_size = cv2.getTrackbarPos('gray', "WINDOW")
 			frame = imutils.resize(frame, width=video_size)
 			
-			out.write(frame)
+			#out.write(frame)
 			
-			# cv2.imshow("Detected Frame",frame)
+			cv2.imshow("Detected Frame",frame)
 			if cv2.waitKey(1) == ord('q'):
 				break
 
