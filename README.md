@@ -1,5 +1,5 @@
 # Keras-Gender-Classifier
-![](ezgif.com-gif-maker (4).gif)
+![](snowden-oliver.gif)
 
 A Neural Network based Face Detection system with classification of Males and Females.
 
